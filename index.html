@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="./bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+  <link href="./dashboard.css" rel="stylesheet">
+  <title>kick off bootstrap</title>
+  <style type="text/css">
+  h2 {padding-top: 50px;}
+  .show-grid div {
+    margin-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #eee;
+    background-color: rgba(86,61,124,.15);
+    border: 1px solid #ddd;
+    border: 1px solid rgba(86,61,124,.2);
+  }
+  .bs-example-bg-classes p {
+    padding: 10px;
+  }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Kick Off Bootstrap</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+        <form class="navbar-form navbar-right">
+          <input type="text" class="form-control" placeholder="Search...">
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3 col-md-2 sidebar">
+        <ol class="nav nav-sidebar">
+          <li><a href="#">什么是 Bootstrap</a></li>
+          <li><a href="#grid-system">栅格系统</a></li>
+          <li><a href="#page-dom">网页元素</a></li>
+          <li><a href="#plugin">插件</a></li>
+        </ol>
+      </div>
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+        <h1 class="sub-header">什么是 Bootstrap</h1>
+        <div class="alert alert-info" role="alert">Bootstrap 是最受欢迎的 HTML、CSS 和 JS 框架，用于开发响应式布局、移动设备优先的 WEB 项目</div>
+
+        <h2 class="sub-header">Bootstrap 有哪些特点</h2>
+        <ul class="list-group">
+          <li class="list-group-item">让前端开发更快速、简单</li>
+          <li class="list-group-item">所有开发者都能快速上手</li>
+          <li class="list-group-item"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> 所有设备都可以适配</li>
+          <li class="list-group-item"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> 所有项目都适用</li>
+        </ul>
+
+
+        <h2 class="sub-header">浏览器支持情况</h2>
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <td></td>
+                <th>Chrome</th>
+                <th>Firefox</th>
+                <th>Internet Explorer</th>
+                <th>Opera</th>
+                <th>Safari</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Android</th>
+                <td class="text-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> 支持</td>
+                <td class="text-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> 支持</td>
+                <td class="text-muted" rowspan="3" style="vertical-align: middle;">N/A</td>
+                <td class="text-danger"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> 不支持</td>
+                <td class="text-muted">N/A</td>
+              </tr>
+              <tr>
+                <th scope="row">iOS</th>
+                <td class="text-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> 支持</td>
+                <td class="text-muted">N/A</td>
+                <td class="text-danger"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> 不支持</td>
+                <td class="text-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> 支持</td>
+              </tr>
+              <tr>
+                <th scope="row">Mac OS X</th>
+                <td class="text-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> 支持</td>
+                <td class="text-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> 支持</td>
+                <td class="text-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> 支持</td>
+                <td class="text-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> 支持</td>
+              </tr>
+              <tr>
+                <th scope="row">Windows</th>
+                <td class="text-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> 支持</td>
+                <td class="text-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> 支持</td>
+                <td class="text-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> 支持</td>
+                <td class="text-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> 支持</td>
+                <td class="text-danger"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> 不支持</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="sub-header">适合各种类型的项目</h2>
+        <div class="bs-docs-section">
+          <p class="lead">以下实例全部基于前面所讲的基本模板并配合 Bootstrap 的众多组件开发而成。我们鼓励你根据自身项目的需要对 Bootstrap 进行定制和修改。</p>
+          <div class="row bs-examples">
+            <div class="col-xs-6 col-md-4">
+              <a class="thumbnail" href="http://v3.bootcss.com/examples/theme/">
+                <img src="http://v3.bootcss.com/examples/screenshots/theme.jpg" alt="Bootstrap theme example">
+              </a>
+              <h3 id="bootstrap-主题">Bootstrap 主题<a class="anchorjs-link" href="#bootstrap-主题"><span class="anchorjs-icon"></span></a></h3>
+              <p>加载可选的 Bootstrap 主题，获得增强的视觉体验。</p>
+            </div>
+            <div class="col-xs-6 col-md-4">
+              <a class="thumbnail" href="http://v3.bootcss.com/examples/grid/">
+                <img src="http://v3.bootcss.com/examples/screenshots/grid.jpg" alt="Multiple grids example">
+              </a>
+              <h3 id="栅格">栅格<a class="anchorjs-link" href="#栅格"><span class="anchorjs-icon"></span></a></h3>
+              <p>多个关于栅格布局方面的实例，涉及到层级（tier）、嵌套（nesting）等等。</p>
+            </div>
+            <div class="col-xs-6 col-md-4">
+              <a class="thumbnail" href="http://v3.bootcss.com/examples/jumbotron/">
+                <img src="http://v3.bootcss.com/examples/screenshots/jumbotron.jpg" alt="Jumbotron example">
+              </a>
+              <h3 id="jumbotron">Jumbotron<a class="anchorjs-link" href="#jumbotron"><span class="anchorjs-icon"></span></a></h3>
+              <p>Build around the jumbotron with a navbar and some basic grid columns.</p>
+            </div>
+            <div class="col-xs-6 col-md-4">
+              <a class="thumbnail" href="http://v3.bootcss.com/examples/jumbotron-narrow/">
+                <img src="http://v3.bootcss.com/examples/screenshots/jumbotron-narrow.jpg" alt="Narrow jumbotron example">
+              </a>
+              <h3 id="narrow-jumbotron">Narrow jumbotron<a class="anchorjs-link" href="#narrow-jumbotron"><span class="anchorjs-icon"></span></a></h3>
+              <p>Build a more custom page by narrowing the default container and jumbotron.</p>
+            </div>
+            <div class="col-xs-6 col-md-4">
+              <a class="thumbnail" href="http://v3.bootcss.com/examples/cover/">
+                <img src="http://v3.bootcss.com/examples/screenshots/cover.jpg" alt="A one-page template example">
+              </a>
+              <h3 id="封面图">封面图<a class="anchorjs-link" href="#封面图"><span class="anchorjs-icon"></span></a></h3>
+              <p>一个单简单、漂亮的首页。</p>
+            </div>
+            <div class="col-xs-6 col-md-4">
+              <a class="thumbnail" href="http://v3.bootcss.com/examples/carousel/">
+                <img src="http://v3.bootcss.com/examples/screenshots/carousel.jpg" alt="Carousel example">
+              </a>
+              <h3 id="carousel">Carousel<a class="anchorjs-link" href="#carousel"><span class="anchorjs-icon"></span></a></h3>
+              <p>Customize the navbar and carousel, then add some new components.</p>
+            </div>
+            <div class="col-xs-6 col-md-4">
+              <a class="thumbnail" href="http://v3.bootcss.com/examples/blog/">
+                <img src="http://v3.bootcss.com/examples/screenshots/blog.jpg" alt="Blog layout example">
+              </a>
+              <h3 id="博客页面">博客页面<a class="anchorjs-link" href="#博客页面"><span class="anchorjs-icon"></span></a></h3>
+              <p>简单的两列式博客布局，还包含了自定义的导航、页头、分类等元素。</p>
+            </div>
+            <div class="col-xs-6 col-md-4">
+              <a class="thumbnail" href="http://v3.bootcss.com/examples/dashboard/">
+                <img src="http://v3.bootcss.com/examples/screenshots/dashboard.jpg" alt="Dashboard example">
+              </a>
+              <h3 id="控制台">控制台<a class="anchorjs-link" href="#控制台"><span class="anchorjs-icon"></span></a></h3>
+              <p>包含基本结构的后台管理模板，还有固定的侧边栏和导航条。</p>
+            </div>
+            <div class="col-xs-6 col-md-4">
+              <a class="thumbnail" href="http://v3.bootcss.com/examples/signin/">
+                <img src="http://v3.bootcss.com/examples/screenshots/sign-in.jpg" alt="Sign-in page example">
+              </a>
+              <h3 id="登录页">登录页<a class="anchorjs-link" href="#登录页"><span class="anchorjs-icon"></span></a></h3>
+              <p>自定义的表单布局以及经过简单设计的登录表单。</p>
+            </div>
+            <div class="col-xs-6 col-md-4">
+              <a class="thumbnail" href="http://v3.bootcss.com/examples/justified-nav/">
+                <img src="http://v3.bootcss.com/examples/screenshots/justified-nav.jpg" alt="Justified nav example">
+              </a>
+              <h3 id="justified-nav">Justified nav<a class="anchorjs-link" href="#justified-nav"><span class="anchorjs-icon"></span></a></h3>
+              <p>Create a custom navbar with justified links. Heads up! <a href="../components/#nav-justified">Not too Safari friendly.</a></p>
+            </div>
+            <div class="col-xs-6 col-md-4">
+              <a class="thumbnail" href="http://v3.bootcss.com/examples/sticky-footer/">
+                <img src="http://v3.bootcss.com/examples/screenshots/sticky-footer.jpg" alt="Sticky footer example">
+              </a>
+              <h3 id="sticky-footer">Sticky footer<a class="anchorjs-link" href="#sticky-footer"><span class="anchorjs-icon"></span></a></h3>
+              <p>Attach a footer to the bottom of the viewport when the content is shorter than it.</p>
+            </div>
+            <div class="col-xs-6 col-md-4">
+              <a class="thumbnail" href="http://v3.bootcss.com/examples/sticky-footer-navbar/">
+                <img src="http://v3.bootcss.com/examples/screenshots/sticky-footer-navbar.jpg" alt="Sticky footer with navbar example">
+              </a>
+              <h3 id="sticky-footer-with-navbar">Sticky footer with navbar<a class="anchorjs-link" href="#sticky-footer-with-navbar"><span class="anchorjs-icon"></span></a></h3>
+              <p>Attach a footer to the bottom of the viewport with a fixed navbar at the top.</p>
+            </div>
+            <div class="col-xs-6 col-md-4">
+              <a class="thumbnail" href="http://v3.bootcss.com/examples/non-responsive/">
+                <img src="http://v3.bootcss.com/examples/screenshots/non-responsive.jpg" alt="Non-responsive example">
+              </a>
+              <h3 id="非响应式-bootstrap-布局">非响应式 Bootstrap 布局<a class="anchorjs-link" href="#非响应式-bootstrap-布局"><span class="anchorjs-icon"></span></a></h3>
+              <p>Easily disable the responsiveness of Bootstrap <a href="#disable-responsive">per our docs</a>.</p>
+            </div>
+            <div class="col-xs-6 col-md-4">
+              <a class="thumbnail" href="http://v3.bootcss.com/examples/offcanvas/">
+                <img src="http://v3.bootcss.com/examples/screenshots/offcanvas.jpg" alt="Off-canvas navigation example">
+              </a>
+              <h3 id="offcanvas">Offcanvas<a class="anchorjs-link" href="#offcanvas"><span class="anchorjs-icon"></span></a></h3>
+              <p>Build a toggleable off-canvas navigation menu for use with Bootstrap.</p>
+            </div>
+          </div>
+        </div>  
+
+        <h2 id="grid-system" class="sub-header">栅格系统</h2>
+        <div>
+          <ul class="list-group">
+            <li class="list-group-item">超小屏幕（手机，小于 768px)</li>
+            <li class="list-group-item">小屏幕（平板，大于等于 768px)</li>
+            <li class="list-group-item">中等屏幕（桌面显示器，大于等于 992px)</li>
+            <li class="list-group-item">大屏幕（大桌面显示器，大于等于 1200px)</li>
+          </ul>
+
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>
+                    超小屏幕
+                    <small>手机 (&lt;768px)</small>
+                  </th>
+                  <th>
+                    小屏幕
+                    <small>平板 (≥768px)</small>
+                  </th>
+                  <th>
+                    中等屏幕
+                    <small>桌面显示器 (≥992px)</small>
+                  </th>
+                  <th>
+                    大屏幕
+                    <small>大桌面显示器 (≥1200px)</small>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="text-nowrap" scope="row">栅格系统行为</th>
+                  <td>总是水平排列</td>
+                  <td colspan="3">开始是堆叠在一起的，当大于这些阈值时将变为水平排列</td>
+                </tr>
+                <tr>
+                  <th class="text-nowrap" scope="row"><code>.container</code> 最大宽度</th>
+                  <td>None （自动）</td>
+                  <td>750px</td>
+                  <td>970px</td>
+                  <td>1170px</td>
+                </tr>
+                <tr>
+                  <th class="text-nowrap" scope="row">类前缀</th>
+                  <td><code>.col-xs-</code></td>
+                  <td><code>.col-sm-</code></td>
+                  <td><code>.col-md-</code></td>
+                  <td><code>.col-lg-</code></td>
+                </tr>
+                <tr>
+                  <th class="text-nowrap" scope="row">列（column）数</th>
+                  <td colspan="4">12</td>
+                </tr>
+                <tr>
+                  <th class="text-nowrap" scope="row">最大列（column）宽</th>
+                  <td class="text-muted">自动</td>
+                  <td>~62px</td>
+                  <td>~81px</td>
+                  <td>~97px</td>
+                </tr>
+                <tr>
+                  <th class="text-nowrap" scope="row">槽（gutter）宽</th>
+                  <td colspan="4">30px （每列左右均有 15px）</td>
+                </tr>
+                <tr>
+                  <th class="text-nowrap" scope="row">可嵌套</th>
+                  <td colspan="4">是</td>
+                </tr>
+                <tr>
+                  <th class="text-nowrap" scope="row">偏移（Offsets）</th>
+                  <td colspan="4">是</td>
+                </tr>
+                <tr>
+                  <th class="text-nowrap" scope="row">列排序</th>
+                  <td colspan="4">是</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>栅格系统示例</h3>
+          <div>
+            <div class="row show-grid">
+              <div class="col-xs-1">1</div>
+              <div class="col-xs-1">1</div>
+              <div class="col-xs-1">1</div>
+              <div class="col-xs-1">1</div>
+              <div class="col-xs-1">1</div>
+              <div class="col-xs-1">1</div>
+              <div class="col-xs-1">1</div>
+              <div class="col-xs-1">1</div>
+              <div class="col-xs-1">1</div>
+              <div class="col-xs-1">1</div>
+              <div class="col-xs-1">1</div>
+              <div class="col-xs-1">1</div>
+            </div>
+            <div class="row show-grid">
+              <div class="col-md-6">.col-md-6</div>
+              <div class="col-md-6">.col-md-6</div>
+            </div>
+            <div class="row show-grid">
+              <div class="col-sm-6">.col-sm-6</div>
+              <div class="col-sm-6">.col-sm-6</div>
+            </div>
+            <div class="row show-grid">
+              <div class="col-xs-6">.col-xs-6</div>
+              <div class="col-xs-6">.col-xs-6</div>
+            </div>
+            <p>同时使用两种</p>
+            <div class="row show-grid">
+              <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+              <div class="col-xs-6 col-sm-8">.col-xs-6 .col-sm-8</div>
+            </div>
+            <p>排序</p>
+            <div class="row show-grid">
+              <div class="col-md-8 col-md-push-2">.col-md-8 .col-md-push-2</div>
+              <div class="col-md-2">.col-md-2</div>
+            </div>
+            <div class="row show-grid">
+              <div class="col-md-6">.col-md-6</div>
+              <div class="col-md-4 col-md-pull-2">.col-md-4 .col-md-pull-2</div>
+            </div>
+            <p>偏移</p>
+            <div class="row show-grid">
+              <div class="col-md-8 col-md-offset-2">.col-md-8 .col-md-offset-2</div>
+              <div class="col-md-2">.col-md-2</div>
+            </div>
+          </div>
+
+          <h3>显示和隐藏</h3>
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped responsive-utilities">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>
+                    超小屏幕
+                    <small>手机 (&lt;768px)</small>
+                  </th>
+                  <th>
+                    小屏幕
+                    <small>平板 (≥768px)</small>
+                  </th>
+                  <th>
+                    中等屏幕
+                    <small>桌面 (≥992px)</small>
+                  </th>
+                  <th>
+                    大屏幕
+                    <small>桌面 (≥1200px)</small>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row"><code>.visible-xs-*</code></th>
+                  <td class="is-visible">可见</td>
+                  <td class="is-hidden">隐藏</td>
+                  <td class="is-hidden">隐藏</td>
+                  <td class="is-hidden">隐藏</td>
+                </tr>
+                <tr>
+                  <th scope="row"><code>.visible-sm-*</code></th>
+                  <td class="is-hidden">隐藏</td>
+                  <td class="is-visible">可见</td>
+                  <td class="is-hidden">隐藏</td>
+                  <td class="is-hidden">隐藏</td>
+                </tr>
+                <tr>
+                  <th scope="row"><code>.visible-md-*</code></th>
+                  <td class="is-hidden">隐藏</td>
+                  <td class="is-hidden">隐藏</td>
+                  <td class="is-visible">可见</td>
+                  <td class="is-hidden">隐藏</td>
+                </tr>
+                <tr>
+                  <th scope="row"><code>.visible-lg-*</code></th>
+                  <td class="is-hidden">隐藏</td>
+                  <td class="is-hidden">隐藏</td>
+                  <td class="is-hidden">隐藏</td>
+                  <td class="is-visible">可见</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <th scope="row"><code>.hidden-xs</code></th>
+                  <td class="is-hidden">隐藏</td>
+                  <td class="is-visible">可见</td>
+                  <td class="is-visible">可见</td>
+                  <td class="is-visible">可见</td>
+                </tr>
+                <tr>
+                  <th scope="row"><code>.hidden-sm</code></th>
+                  <td class="is-visible">可见</td>
+                  <td class="is-hidden">隐藏</td>
+                  <td class="is-visible">可见</td>
+                  <td class="is-visible">可见</td>
+                </tr>
+                <tr>
+                  <th scope="row"><code>.hidden-md</code></th>
+                  <td class="is-visible">可见</td>
+                  <td class="is-visible">可见</td>
+                  <td class="is-hidden">隐藏</td>
+                  <td class="is-visible">可见</td>
+                </tr>
+                <tr>
+                  <th scope="row"><code>.hidden-lg</code></th>
+                  <td class="is-visible">可见</td>
+                  <td class="is-visible">可见</td>
+                  <td class="is-visible">可见</td>
+                  <td class="is-hidden">隐藏</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>以超小屏幕（xs）为例，可用的 .visible-*-* 类是：.visible-xs-block、.visible-xs-inline 和 .visible-xs-inline-block</p>
+        </div>
+
+        <h2 id="page-dom" class="sub-header">网页元素</h2>
+        <div>
+          <h3>表格</h3>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>表单</h3>
+          <h4>普通表单</h4>
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"> Check me out
+              </label>
+            </div>
+            <button class="btn btn-default">Submit</button>
+          </form>
+          <h4>校验状态</h4>
+          <div>
+            <div class="form-group has-success">
+              <label class="control-label" for="inputSuccess1">Input with success</label>
+              <input type="text" class="form-control" id="inputSuccess1">
+            </div>
+            <div class="form-group has-warning">
+              <label class="control-label" for="inputWarning1">Input with warning</label>
+              <input type="text" class="form-control" id="inputWarning1">
+            </div>
+            <div class="form-group has-error">
+              <label class="control-label" for="inputError1">Input with error</label>
+              <input type="text" class="form-control" id="inputError1">
+            </div>
+            <div class="has-success">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" id="checkboxSuccess" value="option1">
+                  Checkbox with success
+                </label>
+              </div>
+            </div>
+            <div class="has-warning">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" id="checkboxWarning" value="option1">
+                  Checkbox with warning
+                </label>
+              </div>
+            </div>
+            <div class="has-error">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" id="checkboxError" value="option1">
+                  Checkbox with error
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <h3>按钮</h3>  
+          <div class="bs-example">
+            <button type="button" class="btn btn-default">（默认样式）Default</button>
+            <button type="button" class="btn btn-primary">（首选项）Primary</button>
+            <button type="button" class="btn btn-success">（成功）Success</button>
+            <button type="button" class="btn btn-info">（一般信息）Info</button>
+            <button type="button" class="btn btn-warning">（警告）Warning</button>
+            <button type="button" class="btn btn-danger">（危险）Danger</button>
+          </div>
+
+          <h4>按钮尺寸</h4>
+          <div class="bs-example" data-example-id="btn-sizes">
+            <p>
+              <button type="button" class="btn btn-primary btn-lg">（大按钮）Large button</button>
+              <button type="button" class="btn btn-default btn-lg">（大按钮）Large button</button>
+            </p>
+            <p>
+              <button type="button" class="btn btn-primary">（默认尺寸）Default button</button>
+              <button type="button" class="btn btn-default">（默认尺寸）Default button</button>
+            </p>
+            <p>
+              <button type="button" class="btn btn-primary btn-sm">（小按钮）Small button</button>
+              <button type="button" class="btn btn-default btn-sm">（小按钮）Small button</button>
+            </p>
+            <p>
+              <button type="button" class="btn btn-primary btn-xs">（超小尺寸）Extra small button</button>
+              <button type="button" class="btn btn-default btn-xs">（超小尺寸）Extra small button</button>
+            </p>
+          </div>
+
+          <h3>情景文本</h3>
+          <div class="bs-example bs-example-bg-classes" data-example-id="contextual-backgrounds-helpers">
+            <p class="bg-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p class="bg-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+            <p class="bg-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+            <p class="bg-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+            <p class="bg-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
+          </div>
+
+          <h3>字体图标</h3>
+          <img width="700" src="./icons.png">
+
+          <h3>下拉菜单</h3>
+          <div class="bs-example" data-example-id="single-button-dropdown">
+            <div class="btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Default <span class="caret"></span></button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </div><!-- /btn-group -->
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Primary <span class="caret"></span></button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </div><!-- /btn-group -->
+            <div class="btn-group">
+              <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Success <span class="caret"></span></button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </div><!-- /btn-group -->
+            <div class="btn-group">
+              <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Info <span class="caret"></span></button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </div><!-- /btn-group -->
+            <div class="btn-group">
+              <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Warning <span class="caret"></span></button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </div><!-- /btn-group -->
+            <div class="btn-group">
+              <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Danger <span class="caret"></span></button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </div><!-- /btn-group -->
+          </div>
+
+          <h3>输入框组</h3>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for...">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">Go!</button>
+            </span>
+          </div>
+
+          <h3>导航条</h3>
+
+          <h3>面包屑</h3>
+          <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Library</a></li>
+            <li class="active">Data</li>
+          </ol>
+
+          <h3>分页</h3>
+          <ul class="pagination">
+            <li>
+              <a href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li>
+              <a href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+
+          <h3>徽章</h3>
+          <button class="btn btn-primary" type="button">
+            Messages <span class="badge">4</span>
+          </button>
+
+          <h3>警告框</h3>
+          <div class="bs-example" data-example-id="simple-alerts">
+            <div class="alert alert-success" role="alert">
+              <strong>Well done!</strong> You successfully read this important alert message.
+            </div>
+            <div class="alert alert-info" role="alert">
+              <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+            </div>
+            <div class="alert alert-warning" role="alert">
+              <strong>Warning!</strong> Better check yourself, you're not looking too good.
+            </div>
+            <div class="alert alert-danger" role="alert">
+              <strong>Oh snap!</strong> Change a few things up and try submitting again.
+            </div>
+          </div>
+
+          <h3>进度条</h3>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+              60%
+            </div>
+
+          </div>
+
+          <div class="progress">
+            <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+              <span class="sr-only">40% Complete (success)</span>
+            </div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+              <span class="sr-only">20% Complete</span>
+            </div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+              <span class="sr-only">60% Complete (warning)</span>
+            </div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+              <span class="sr-only">80% Complete (danger)</span>
+            </div>
+          </div>
+
+          <h3>面板</h3>
+          <div class="bs-example" data-example-id="table-within-panel">
+              <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">Panel heading</div>
+                <div class="panel-body">
+                  <p>Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                </div>
+
+                <!-- Table -->
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
+
+          
+          <h3>新闻格式</h3>
+          <div class="bs-example" data-example-id="media-alignment">
+            <div class="media">
+              <div class="media-left">
+                <a href="#">
+                  <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PGRlZnMvPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjEzLjQ2MDkzNzUiIHk9IjMyIiBzdHlsZT0iZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9nPjwvc3ZnPg==" data-holder-rendered="true" style="width: 64px; height: 64px;">
+                </a>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading" id="top-aligned-media">Top aligned media<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4>
+                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left media-middle">
+                <a href="#">
+                  <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PGRlZnMvPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjEzLjQ2MDkzNzUiIHk9IjMyIiBzdHlsZT0iZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9nPjwvc3ZnPg==" data-holder-rendered="true" style="width: 64px; height: 64px;">
+                </a>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading" id="middle-aligned-media">Middle aligned media<a class="anchorjs-link" href="#middle-aligned-media"><span class="anchorjs-icon"></span></a></h4>
+                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left media-bottom">
+                <a href="#">
+                  <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PGRlZnMvPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjEzLjQ2MDkzNzUiIHk9IjMyIiBzdHlsZT0iZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9nPjwvc3ZnPg==" data-holder-rendered="true" style="width: 64px; height: 64px;">
+                </a>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading" id="bottom-aligned-media">Bottom aligned media<a class="anchorjs-link" href="#bottom-aligned-media"><span class="anchorjs-icon"></span></a></h4>
+                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <h2 id="plugin" class="sub-header">插件</h2>
+        <div>
+          <h3>Tooltips</h3>
+          <div class="bs-example tooltip-demo">
+            <div class="bs-example-tooltips">
+              <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="" data-original-title="Tooltip on left">Tooltip on left</button>
+              <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="" data-original-title="Tooltip on top">Tooltip on top</button>
+              <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tooltip on bottom">Tooltip on bottom</button>
+              <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="" data-original-title="Tooltip on right">Tooltip on right</button>
+            </div>
+          </div>
+
+          <h3>标签页</h3>
+          <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+            <ul id="myTab" class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Home</a></li>
+              <li role="presentation" class=""><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Profile</a></li>
+              <li role="presentation" class="dropdown">
+                <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">
+                  <li><a href="#dropdown1" tabindex="-1" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1">@fat</a></li>
+                  <li><a href="#dropdown2" tabindex="-1" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2">@mdo</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+              <div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
+                <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
+                <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="dropdown1" aria-labelledby="dropdown1-tab">
+                <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="dropdown2" aria-labelledby="dropdown2-tab">
+                <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
+              </div>
+            </div>
+          </div>
+
+          <h3>模态框</h3>
+          <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal-test">
+            Launch demo modal
+          </button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="modal fade" id="modal-test">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Modal title</h4>
+        </div>
+        <div class="modal-body">
+          <p>One fine body&hellip;</p>
+          <p>One fine body&hellip;</p>
+          <p>One fine body&hellip;</p>
+          <p>One fine body&hellip;</p>
+          <p>One fine body&hellip;</p>
+          <p>One fine body&hellip;</p>
+          <p>One fine body&hellip;</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <script type="text/javascript" src="./bower_components/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="./bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+  <script type="text/javascript">
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
+  $('#myTab a').click(function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+  })
+  </script>
+</body>
+</html>
