@@ -64,15 +64,16 @@
       <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 
         <h1 class="sub-header">什么是 Bootstrap</h1>
-        <div class="alert alert-info" role="alert">Bootstrap 是最受欢迎的 HTML、CSS 和 JS 框架，用于开发响应式布局、移动设备优先的 WEB 项目</div>
+        <div class="alert alert-info" role="alert">Bootstrap 是最受欢迎的 HTML、CSS 和 JS 框架，用于开发响应式布局、移动设备优先的 WEB 项目。历史版本：2.x & 3.x</div>
 
         <h2 class="sub-header">Bootstrap 有哪些特点</h2>
         <ul class="list-group">
-          <li class="list-group-item">让前端开发更快速、简单</li>
-          <li class="list-group-item">所有开发者都能快速上手</li>
+          <li class="list-group-item"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> 让前端开发更快速、简单</li>
+          <li class="list-group-item"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> 所有开发者都能快速上手</li>
           <li class="list-group-item"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> 所有设备都可以适配</li>
           <li class="list-group-item"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> 所有项目都适用</li>
         </ul>
+        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-test">真的仅此而已吗？</button>
 
 
         <h2 class="sub-header">浏览器支持情况</h2>
@@ -135,13 +136,6 @@
               <p>加载可选的 Bootstrap 主题，获得增强的视觉体验。</p>
             </div>
             <div class="col-xs-6 col-md-4">
-              <a class="thumbnail" href="http://v3.bootcss.com/examples/grid/">
-                <img src="http://v3.bootcss.com/examples/screenshots/grid.jpg" alt="Multiple grids example">
-              </a>
-              <h3 id="栅格">栅格<a class="anchorjs-link" href="#栅格"><span class="anchorjs-icon"></span></a></h3>
-              <p>多个关于栅格布局方面的实例，涉及到层级（tier）、嵌套（nesting）等等。</p>
-            </div>
-            <div class="col-xs-6 col-md-4">
               <a class="thumbnail" href="http://v3.bootcss.com/examples/jumbotron/">
                 <img src="http://v3.bootcss.com/examples/screenshots/jumbotron.jpg" alt="Jumbotron example">
               </a>
@@ -197,36 +191,32 @@
               <h3 id="justified-nav">Justified nav<a class="anchorjs-link" href="#justified-nav"><span class="anchorjs-icon"></span></a></h3>
               <p>Create a custom navbar with justified links. Heads up! <a href="../components/#nav-justified">Not too Safari friendly.</a></p>
             </div>
-            <div class="col-xs-6 col-md-4">
-              <a class="thumbnail" href="http://v3.bootcss.com/examples/sticky-footer/">
-                <img src="http://v3.bootcss.com/examples/screenshots/sticky-footer.jpg" alt="Sticky footer example">
-              </a>
-              <h3 id="sticky-footer">Sticky footer<a class="anchorjs-link" href="#sticky-footer"><span class="anchorjs-icon"></span></a></h3>
-              <p>Attach a footer to the bottom of the viewport when the content is shorter than it.</p>
-            </div>
-            <div class="col-xs-6 col-md-4">
-              <a class="thumbnail" href="http://v3.bootcss.com/examples/sticky-footer-navbar/">
-                <img src="http://v3.bootcss.com/examples/screenshots/sticky-footer-navbar.jpg" alt="Sticky footer with navbar example">
-              </a>
-              <h3 id="sticky-footer-with-navbar">Sticky footer with navbar<a class="anchorjs-link" href="#sticky-footer-with-navbar"><span class="anchorjs-icon"></span></a></h3>
-              <p>Attach a footer to the bottom of the viewport with a fixed navbar at the top.</p>
-            </div>
-            <div class="col-xs-6 col-md-4">
-              <a class="thumbnail" href="http://v3.bootcss.com/examples/non-responsive/">
-                <img src="http://v3.bootcss.com/examples/screenshots/non-responsive.jpg" alt="Non-responsive example">
-              </a>
-              <h3 id="非响应式-bootstrap-布局">非响应式 Bootstrap 布局<a class="anchorjs-link" href="#非响应式-bootstrap-布局"><span class="anchorjs-icon"></span></a></h3>
-              <p>Easily disable the responsiveness of Bootstrap <a href="#disable-responsive">per our docs</a>.</p>
-            </div>
-            <div class="col-xs-6 col-md-4">
-              <a class="thumbnail" href="http://v3.bootcss.com/examples/offcanvas/">
-                <img src="http://v3.bootcss.com/examples/screenshots/offcanvas.jpg" alt="Off-canvas navigation example">
-              </a>
-              <h3 id="offcanvas">Offcanvas<a class="anchorjs-link" href="#offcanvas"><span class="anchorjs-icon"></span></a></h3>
-              <p>Build a toggleable off-canvas navigation menu for use with Bootstrap.</p>
-            </div>
           </div>
         </div>  
+
+        <h2 class="sub-header">hello world</h2>
+        <div>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+    &lt;link href="./bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet"&gt;
+    &lt;link href="./dashboard.css" rel="stylesheet"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- do something --&gt;
+    &lt;h1&gt;hello world&lt;/h1&gt;
+    &lt;script src="./bower_components/jquery/dist/jquery.js"&gt;&lt;/script&gt;
+    &lt;script src="./bower_components/bootstrap/dist/js/bootstrap.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+        </div>
+
 
         <h2 id="grid-system" class="sub-header">栅格系统</h2>
         <div>
@@ -904,22 +894,8 @@
   <div class="modal fade" id="modal-test">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">Modal title</h4>
-        </div>
         <div class="modal-body">
-          <p>One fine body&hellip;</p>
-          <p>One fine body&hellip;</p>
-          <p>One fine body&hellip;</p>
-          <p>One fine body&hellip;</p>
-          <p>One fine body&hellip;</p>
-          <p>One fine body&hellip;</p>
-          <p>One fine body&hellip;</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <div style="line-height:100px; text-align:center;">老子终于可以不用写 css 了！</div>
         </div>
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
